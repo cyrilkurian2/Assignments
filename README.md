@@ -59,6 +59,7 @@
 <li>Check IF current element is equal to SEARCH_ITEM
 <ul>
 <li>Print SEARCH_ITEM found
+<li>Print index value of current element in loop
 </ul>
 <li>ELSE
 <ul>
