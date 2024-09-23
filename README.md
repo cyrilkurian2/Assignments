@@ -1,4 +1,4 @@
-# pseudocode_assignments
+# Pseudocode_assignment
 
 ## SUM OF THREE NUMBERS
 <ol>
@@ -44,4 +44,26 @@
 <ul>
 <li>Print REV
 </ul>
+</ol>
+
+
+## LINEAR SEARCH
+<ol>
+<li>This program will return the position of search item provided by user if it is present in the given array
+<li>Get the array in which we have to perform linear search and store it in variable SEARCH_ARRAY
+<li>Get the search from user and store it in variable SEARCH_ITEM
+<li>Find the length of the given array and store it in LENGTH
+<li>DECLARE a variable LOC to save the location of current element in the SEARCH_ARRAY
+<li>Repeat until last element of the SEARCH_ARRAY
+<ul>
+<li>Check IF current element is equal to SEARCH_ITEM
+<ul>
+<li>Print SEARCH_ITEM found
+</ul>
+<li>ELSE
+<ul>
+<li>Continue the loop
+</ul>
+</ul>
+<li>Print SEARCH_ITEM not found
 </ol>
