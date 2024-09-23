@@ -18,7 +18,7 @@
 ## SUM OF SQUARES OF TWO NUMBERS
 <ol>
 <li>This program will return the sum of squares of two numbers inputted by the user </li>
-<li>Get the first number from the user and store it in variable FIRST_NUM</li>
+<li>Get first number from the user and store it in variable FIRST_NUM</li>
 <li>Update the value of FIRST_NUM by multiplying FIRST_NUM with itself</li>
 <ul><li>FIRST_NUM = FIRST_NUM * FIRST_NUM</li></ul>
 <li>Similarly, SECOND_NUM for second number </li>
@@ -27,4 +27,21 @@
 <ul><li>SUM = FIRST_NUM + SECOND_NUM</li></ul>
 <li>Display result</li>
 <ul><li>Print SUM</li></ul>
+</ol>
+
+## REVERSE OF A NUMBER 
+<ol>
+<li>This program will return reverse of a number inputted by the user</li>
+<li>Get number to be reversed from the user and store it in variable NUMBER</li>
+<li>INITIALIZE a variable REV=0 for storing reversed number</li>
+<li>Repeat while NUMBER is greater than 0</li>
+<ul>
+<li>Store Reminder of NUMBER divided by 10 is a variable REMINDER, [REMINDER = NUMBER % 10]
+<li>Update REV value by REV multipled with 10 and add REMINDER, [REV = REV*10 + REMINDER]
+<li>Update value of NUMBER by NUMBER divided by 10, [NUMBER / 10]
+</ul>
+<li>Display result
+<ul>
+<li>Print REV
+</ul>
 </ol>
