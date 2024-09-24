@@ -12,3 +12,5 @@ services:
             - my-test-volume:/var/opt/mssql
 volumes:
     my-test-volume:
+
+# For making the data persistent we can use volumes, so even if stop or delete containers, the data will not be affected
