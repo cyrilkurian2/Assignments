@@ -51,7 +51,7 @@
 <ol>
 <li>This program will return the position of search item provided by user if it is present in the given array
 <li>Get the array in which we have to perform linear search and store it in variable SEARCH_ARRAY
-<li>Get the search from user and store it in variable SEARCH_ITEM
+<li>Get the search item from user and store it in variable SEARCH_ITEM
 <li>Find the length of the given array and store it in LENGTH
 <li>DECLARE a variable LOC to save the location of current element in the SEARCH_ARRAY
 <li>Repeat until last element of the SEARCH_ARRAY
@@ -67,4 +67,32 @@
 </ul>
 </ul>
 <li>Print SEARCH_ITEM not found
+</ol>
+
+## BINARY SEARCH 
+<ol>
+<li>This program will return the position of search item provided by user if it is present in the given array
+<li>Get the array in which we have to perform linear search and store it in variable SEARCH_ARRAY
+<li>Get the search item from user and store it in variable SEARCH_ITEM
+<li>Find the length of the given array and store it in LENGTH
+<li>SORT the given array
+<li>INITIALIZE variables LOW=0 and HIGH=LEN
+<li>Repeat until LOW is less than HIGH
+<ul>
+<li>INITIALIZE a variable MID IF not present ELSE UPDATE value of MID with MID = (LOW + HIGH) / 2
+<li>Check IF SEARCH_ITEM == MID 
+<ul>
+<li>Print Found SEARCH_ITEM
+<li>Print position of current element in the loop
+</ul>
+<li>Check IF element at index position MID is less than SEARCH_ITEM
+<ul>
+<li>UPDATE value of LOW by MID + 1
+</ul>
+<li>ELSE
+<ul>
+<li>UPDATE value of HIGH by MID - 1
+</ul>
+</ul>
+<li>Print SEARCH_ITEM not found 
 </ol>
