@@ -12,6 +12,7 @@ namespace input_char_display_sport
     {
         static void Main(string[] args)
         {
+            inputLabel;
             Console.WriteLine("Enter character");
             char ch = Console.ReadLine()[0];
 
@@ -50,6 +51,7 @@ namespace input_char_display_sport
                         Console.WriteLine("Invalid input,please try again");
                         break;
                     }
+                goto inputLable;
             }
 
             Console.ReadLine();
