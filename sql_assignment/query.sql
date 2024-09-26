@@ -43,4 +43,7 @@ ALTER TABLE Employee ADD CONSTRAINT unique_email UNIQUE (email);
 
 -- Write an ALTER TABLE statement to add an "Email" column to the Employees table with a UNIQUE constraint that allows NULL values
 
-ALTER TABLE Employee ADD email varchar(20) NULL UNIQUE;
+ALTER TABLE Employee ADD Email varchar(30);
+CREATE UNIQUE INDEX Uq_Email ON Employee (Email) WHERE Email IS NOT NULL;
+
+-- CREATE UNIQUE INDEX ensures that only non-null values are considered for the unique constraint, allowing multiple NULL values in the Email column
