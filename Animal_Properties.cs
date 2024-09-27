@@ -51,13 +51,13 @@ namespace Animal_properties
             myDog.Name = "Dog";
             Console.WriteLine("This is a " + myDog.Name);
             myDog.Sound();
-
-            Animal myCat = new Cat();
+            
+            Cat myCat = new Cat();
             myCat.Name = "Cat";
             Console.WriteLine("This is a " + myCat.Name);
             myCat.Sound();
-
-            Animal myBird = new Bird();
+            
+            Bird myBird = new Bird();
             myBird.Name = "Bird";
             Console.WriteLine("This is a " + myBird.Name);
             myBird.Sound();
