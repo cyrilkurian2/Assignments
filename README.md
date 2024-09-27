@@ -60,11 +60,12 @@
 <ul>
 <li>Print SEARCH_ITEM found
 <li>Print index value of current element in loop
+<li>BREAK
 </ul>
-<li>ELSE
+<!-- <li>ELSE
 <ul>
 <li>Continue the loop
-</ul>
+</ul> -->
 </ul>
 <li>Print SEARCH_ITEM not found
 </ol>
@@ -84,6 +85,7 @@
 <ul>
 <li>Print Found SEARCH_ITEM
 <li>Print position of current element in the loop
+<li>BREAK
 </ul>
 <li>Check IF element at index position MID is less than SEARCH_ITEM
 <ul>
