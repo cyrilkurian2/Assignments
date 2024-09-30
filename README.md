@@ -98,3 +98,73 @@
 </ul>
 <li>Print SEARCH_ITEM not found 
 </ol>
+
+
+## REVERSE_STRING
+This program will return reverse of the input string
+GET input string from user and store it in variable ORIGINAL_STRING
+INITIALIZE variable REVERSED_STRING as an empty string
+SET LENGTH to the length of ORIGINAL_STRING
+FOR i from LENGTH-1 down to 0
+APPEND ORIGINAL_STRING[i] to REVERSED_STRING
+PRINT REVERSED_STRING
+
+FIND_CHARACTER
+This program will search for a character in input string and return true if found
+GET input string from user and store it in variable INPUT_STRING
+GET character to search from user and store it in variable SEARCH_CHAR
+INITIALIZE variable FOUND as false
+SET LENGTH to the length of INPUT_STRING
+FOR i from 0 to LENGTH-1
+IF INPUT_STRING[i] == SEARCH_CHAR THEN
+SET FOUND to true
+BREAK
+PRINT FOUND
+
+
+COUNT_OCCURRENCES
+This program will return occurrences of a character in input string 
+GET input string from user and store it in variable INPUT_STRING
+GET character to count from user and store it in variable TARGET_CHAR
+INITIALIZE variable COUNT to 0
+SET LENGTH to the length of INPUT_STRING
+FOR i from 0 to LENGTH-1
+IF INPUT_STRING[i] == TARGET_CHAR THEN
+INCREMENT COUNT by 1
+PRINT COUNT
+
+
+FIBONACCI_SERIES
+This program prints fibonacci series 
+GET number of terms from user and store it in variable N
+INITIALIZE FIRST_TERM to 0
+INITIALIZE SECOND_TERM to 1
+PRINT FIRST_TERM
+PRINT SECOND_TERM
+FOR i from 2 to N-1
+INITIALIZE NEXT_TERM to FIRST_TERM + SECOND_TERM
+PRINT NEXT_TERM
+UPDATE FIRST_TERM to SECOND_TERM
+UPDATE SECOND_TERM to NEXT_TERM
+
+
+PROGRAM BUBBLE_SORT
+This program will sort the given array using bubble sort
+GET array of numbers from user and store it in variable NUM_ARRAY
+SET LENGTH to the length of NUM_ARRAY
+FOR i from 0 to LENGTH-1
+FOR j from 0 to LENGTH-i-2
+IF NUM_ARRAY[j] > NUM_ARRAY[j+1] THEN
+SWAP NUM_ARRAY[j] with NUM_ARRAY[j+1]
+PRINT NUM_ARRAY
+PROGRAM TOWER_OF_HANOI
+
+FUNCTION MOVE_DISK(N, FROM_ROD, TO_ROD, AUX_ROD)
+IF N == 1 THEN
+PRINT "Move disk from " + FROM_ROD + " to " + TO_ROD
+ELSE
+MOVE_DISK(N-1, FROM_ROD, AUX_ROD, TO_ROD)
+PRINT "Move disk from " + FROM_ROD + " to " + TO_ROD
+MOVE_DISK(N-1, AUX_ROD, TO_ROD, FROM_ROD)
+GET number of disks from user and store it in variable DISK_COUNT
+CALL MOVE_DISK(DISK_COUNT, 'A', 'C', 'B')
