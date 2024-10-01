@@ -60,11 +60,12 @@
 <ul>
 <li>Print SEARCH_ITEM found
 <li>Print index value of current element in loop
+<li>BREAK
 </ul>
-<li>ELSE
+<!-- <li>ELSE
 <ul>
 <li>Continue the loop
-</ul>
+</ul> -->
 </ul>
 <li>Print SEARCH_ITEM not found
 </ol>
@@ -84,6 +85,7 @@
 <ul>
 <li>Print Found SEARCH_ITEM
 <li>Print position of current element in the loop
+<li>BREAK
 </ul>
 <li>Check IF element at index position MID is less than SEARCH_ITEM
 <ul>
@@ -95,4 +97,109 @@
 </ul>
 </ul>
 <li>Print SEARCH_ITEM not found 
+</ol>
+
+## REVERSE STRING
+<ol>
+<li>This program will return reverse of the input string
+<li>GET input string from user and store it in variable ORIGINAL_STRING
+<li>INITIALIZE variable REVERSED_STRING as an empty string
+<li>SET LENGTH to the length of ORIGINAL_STRING
+<ul>
+<li>FOR i from LENGTH-1 down to 0
+<li>APPEND ORIGINAL_STRING[i] to REVERSED_STRING
+</ul>
+<li>PRINT REVERSED_STRING
+</ol>
+
+## FIND CHARACTER
+<ol>
+<li>This program will search for a character in input string and return true if found
+<li>GET input string from user and store it in variable INPUT_STRING
+<li>GET character to search from user and store it in variable SEARCH_CHAR
+<li>INITIALIZE variable FOUND as false
+<li>SET LENGTH to the length of INPUT_STRING
+<li>FOR i from 0 to LENGTH-1
+<ul>
+<li>IF INPUT_STRING[i] == SEARCH_CHAR THEN
+<ul>
+<li>SET FOUND to true
+<li>BREAK
+</ul>
+</ul>
+<li>PRINT FOUND
+</ol>
+
+
+## COUNT OCCURRENCES
+<ol>
+<li>This program will return occurrences of a character in input string 
+<li>GET input string from user and store it in variable INPUT_STRING
+<li>GET character to count from user and store it in variable TARGET_CHAR
+<li>INITIALIZE variable COUNT to 0
+<li>SET LENGTH to the length of INPUT_STRING
+<li>FOR i from 0 to LENGTH-1
+<ul>
+<li>IF INPUT_STRING[i] == TARGET_CHAR THEN
+<ul>
+<li>INCREMENT COUNT by 1
+</ul>
+</ul>
+<li>PRINT COUNT
+</ol>
+
+## FIBONACCI SERIES
+<ol>
+<li>This program prints fibonacci series 
+<li>GET number of terms from user and store it in variable N
+<li>INITIALIZE FIRST_TERM to 0
+<li>INITIALIZE SECOND_TERM to 1
+<li>PRINT FIRST_TERM
+<li>PRINT SECOND_TERM
+<li>FOR i from 2 to N-1
+<ul>
+<li>INITIALIZE NEXT_TERM to FIRST_TERM + SECOND_TERM
+<li>PRINT NEXT_TERM
+<li>UPDATE FIRST_TERM to SECOND_TERM
+<li>UPDATE SECOND_TERM to NEXT_TERM
+</ul>
+</ol>
+
+## PROGRAM BUBBLE SORT
+<ol>
+<li>This program will sort the given array using bubble sort
+<li>GET array of numbers from user and store it in variable NUM_ARRAY
+<li>SET LENGTH to the length of NUM_ARRAY
+<li>FOR i from 0 to LENGTH-1
+<ul>
+<li>FOR j from 0 to LENGTH-i-2
+<ul>
+<li>IF NUM_ARRAY[j] > NUM_ARRAY[j+1] THEN
+<ul>
+<li>SWAP NUM_ARRAY[j] with NUM_ARRAY[j+1]
+</ul>
+</ul>
+</ul>
+<li>PRINT NUM_ARRAY
+</ol>
+
+## PROGRAM TOWER OF HANOI
+
+<ol>
+<li>FUNCTION MOVE_DISK(N, FROM_ROD, TO_ROD, AUX_ROD)
+<ul>
+<li>IF N == 1 THEN
+<ul>
+<li>PRINT "Move disk from " + FROM_ROD + " to " + TO_ROD
+</ul>
+<li>ELSE
+<ul>
+<li>MOVE_DISK(N-1, FROM_ROD, AUX_ROD, TO_ROD)
+<li>PRINT "Move disk from " + FROM_ROD + " to " + TO_ROD
+<li>MOVE_DISK(N-1, AUX_ROD, TO_ROD, FROM_ROD)
+<li>GET number of disks from user and store it in variable DISK_COUNT
+</ul>
+</ul>
+</ul>
+<li>CALL MOVE_DISK(DISK_COUNT, 'A', 'C', 'B')
 </ol>
