@@ -28,15 +28,17 @@ namespace Animal
     }
     abstract class Animal
     {
-        public string Name { get; set; }
+        public abstract string Name { get; set; }
 
-        public string Sound { get; set; }
+        public abstract string Sound { get; set; }
 
         public abstract void MakeSound();
     }
 
     class Dog : Animal
     {
+        public override string Name { get; set; }
+        public override string Sound { get; set; }
         public override void MakeSound()
         {
             Console.WriteLine("Dog Named " + this.Name + " Makes This Sound: " + this.Sound);
@@ -45,6 +47,8 @@ namespace Animal
 
     class Cat : Animal
     {
+        public override string Name { get; set; }
+        public override string Sound { get; set; }
         public override void MakeSound()
         {
             Console.WriteLine("Cat Named " + this.Name + " This Sound: " + this.Sound);
@@ -53,6 +57,8 @@ namespace Animal
 
     class Bird : Animal
     {
+        public override string Name { get; set; }
+        public override string Sound { get; set; }
         public override void MakeSound()
         {
             Console.WriteLine("Bird Named " + this.Name + " Makes This Sound: " + this.Sound );
