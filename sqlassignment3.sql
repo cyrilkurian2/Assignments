@@ -62,9 +62,21 @@ FROM Patients pat LEFT JOIN Appointments app
 ON pat.PatientID = app.PatientID LEFT JOIN Prescriptions pres ON pres.Patientid = pat.Patientid LEFT JOIN Doctors doc ON app.DoctorID = doc.DoctorID WHERE MedicationID IS NULL
 
 -- 7. List all doctors who have appointments in the next week, along with the patients they're scheduled to see.
+SELECT DoctorName,AppointmentDate 
+FROM Doctors doc LEFT JOIN Appointments app 
+ON doc.Doctorid=app.Doctorid WHERE DATEPART(WEEK,AppointmentDate)=DATEPART(WEEK,GETDATE())+1 AND YEAR(AppointmentDate)=YEAR(GETDATE())
 
 -- 8. Display all medications prescribed to patients over 60 years old, including medications not prescribed to this age group.
+SELECT MedicationID,MedicationName,PatientName
+FROM Medications med LEFT JOIN Prescriptions pres ON med.MedicationID=pres.MedicationID 
+LEFT JOIN Patients pat ON pat.PatientID=pres.PatientID WHERE DATEDIFF(YEAR,DateOfBirth,GETDATE())>60
 
 -- 9. Show all appointments from last year and any associated prescription information.
+SELECT AppointmentDate,PatientName,PrescriptionDate 
+FROM Appointments app 
+LEFT JOIN Patients pat ON app.PatientID=pat.PatientID
+LEFT JOIN Prescriptions pres ON pres.PatientID=pat.PatientID
+WHERE YEAR(AppointmentDate)= YEAR(GETDATE()) - 1
 
 -- 10. List all possible specialty-medication combinations, regardless of whether a doctor of that specialty has prescribed that medication.
+SELECT Specialty,MedicationName FROM Doctors CROSS JOIN Medications  
