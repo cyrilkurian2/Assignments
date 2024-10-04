@@ -1,0 +1,54 @@
+CREATE TABLE Customers (
+    CustomerID INT IDENTITY(1, 1) PRIMARY KEY,
+    Name VARCHAR(255),
+    Email VARCHAR(255) UNIQUE,
+    Phone VARCHAR(255) UNIQUE,
+	Addresss VARCHAR(255),
+);
+
+CREATE TABLE Sellers (
+	SellerID INT IDENTITY(1, 1) PRIMARY KEY,
+	SellerName VARCHAR(255),
+	SellerEmail VARCHAR(255),
+	Rating INT,
+	TotalSales INT,
+);
+
+CREATE TABLE Products (
+	ProductID INT IDENTITY(1, 1) PRIMARY KEY,
+	ProductName VARCHAR(255),
+	ProductDescription VARCHAR(255),
+	ProductPrice DECIMAL(10, 2),
+	
+);
+
+CREATE TABLE Orders (
+	OrderID INT IDENTITY(1, 1) PRIMARY KEY,
+	CustomerID INT NOT NULL,
+	ProductID INT NOT NULL,
+	SellerID INT NOT NULL,
+	TotalAmount DECIMAL(10, 2),
+	OrderDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+	FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+	FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+	FOREIGN KEY (SellerID) REFERENCES Sellers(SellerID),
+);
+
+CREATE TABLE Payments (
+	PaymentID INT IDENTITY(1, 1) PRIMARY KEY,
+	OrderID INT NOT NULL,
+	PaymentDate DATETIME DEFAULT CURRENT_TIMESTAMP,
+	PaymentAmount DECIMAL(10, 2),
+	FOREIGN KEY (OrderID) REFERENCES Orders(OrderID),
+);
+
+CREATE TABLE Reviews (
+	ReviewID INT IDENTITY(1, 1) PRIMARY KEY,
+	ProductID INT NOT NULL,
+	CustomerID INT NOT NULL,
+	Rating INT,
+	ReviewDesciption VARCHAR(255),
+	FOREIGN KEY (ProductID) REFERENCES Products(ProductID),
+	FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+);
+
