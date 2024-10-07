@@ -10,32 +10,40 @@
     <form>
         <label>Enter a new item:</label>
         <input type="text" id="item-input" placeholder="Enter a new item" required>
-        <button id="add-button">Add Item</button>
+        <button id="add-button" onclick="addItem()">Add Item</button>
         <ul id="shopping-list"></ul>
     </form>
 
     <script>
-        const addButton = document.getElementById('add-button');
-        const itemInput = document.getElementById('item-input');
-        const shoppingList = document.getElementById('shopping-list');
+        function addItem() {
+            const addButton = document.getElementById('add-button');
+            const itemInput = document.getElementById('item-input');
+            const shoppingList = document.getElementById('shopping-list');
 
-        addButton.addEventListener('click', () => {
             const itemText = itemInput.value.trim();
             if (itemText) {
                 const listItem = document.createElement('li');
-                listItem.textContent = itemText + " ";
+                listItem.textContent = itemText;
+
+                
+                const separator = document.createElement('span');
+                separator.style.display = 'inline-block';
+                separator.style.width = '10px'; 
+
+                listItem.appendChild(separator); 
 
                 const deleteButton = document.createElement('button');
                 deleteButton.textContent = 'Delete';
                 deleteButton.onclick = () => listItem.remove();
 
-                listItem.appendChild(deleteButton);
-                shoppingList.appendChild(listItem);
+                listItem.appendChild(deleteButton); 
+                shoppingList.appendChild(listItem); 
 
-                itemInput.value = '';
+                itemInput.value = ''; 
                 itemInput.focus();
             }
-        });
+
+        };
     </script>
 </body>
 </html>
