@@ -1,0 +1,28 @@
+ul {
+    /*list-style-position: outside;*/
+    list-style-type: none;
+  }
+  
+  
+  ul li {
+    margin-bottom: 10px;
+    margin-right: 60%;
+    margin-left: 20%;
+    text-align: center;
+  }
+  
+  .gray-bg {
+    background-color: #dcdcdc;
+    padding: 10px;
+  }
+
+  .black-bg {
+    background-color: #0a0909;
+    color: #F5F5F5;
+    padding: 10px;
+  }
+
+  .olive-bg {
+    background-color: #105303;
+    padding: 10px;
+  }

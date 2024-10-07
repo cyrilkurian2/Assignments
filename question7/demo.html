@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body>
+    <h1>My Shopping List</h1>
+    <form>
+        <label>Enter a new item:</label>
+        <input type="text" id="item-input" placeholder="Enter a new item" required>
+        <button id="add-button" onclick="addItem()">Add Item</button>
+        <ul id="shopping-list"></ul>
+    </form>
+
+    <script>
+        function addItem() {
+            const addButton = document.getElementById('add-button');
+            const itemInput = document.getElementById('item-input');
+            const shoppingList = document.getElementById('shopping-list');
+
+            const itemText = itemInput.value.trim();
+            if (itemText) {
+                const listItem = document.createElement('li');
+                listItem.textContent = itemText;
+
+                
+                const separator = document.createElement('span');
+                separator.style.display = 'inline-block';
+                separator.style.width = '10px'; 
+
+                listItem.appendChild(separator); 
+
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.onclick = () => listItem.remove();
+
+                listItem.appendChild(deleteButton); 
+                shoppingList.appendChild(listItem); 
+
+                itemInput.value = ''; 
+                itemInput.focus();
+            }
+
+        };
+    </script>
+</body>
+</html>
