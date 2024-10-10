@@ -1,0 +1,10 @@
+<!-- <form (ngSubmit)="addItem()" #shoppingForm="ngForm">
+    <label>Enter a new item:</label>
+    <input type="text" [(ngModel)]="newItem" name="itemInput" placeholder="Enter a new item" required>
+    <button type="submit">Add Item</button>
+  </form> -->
+
+  <h3>Count of items:{{countInt}}</h3>
+  <label>Enter a new item:</label>
+  <input type="text" [(ngModel)]="itemValue" placeholder="Enter a new item" required>
+  <button type="submit"(click)="addNewItem()" >Add Item</button>
