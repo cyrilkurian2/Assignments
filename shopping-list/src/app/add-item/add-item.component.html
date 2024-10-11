@@ -1,0 +1,5 @@
+<form (ngSubmit)="addItem()" #shoppingForm="ngForm">
+    <label>Enter a new item:</label>
+    <input type="text" [(ngModel)]="newItem" name="itemInput" placeholder="Enter a new item" required>
+    <button type="submit">Add Item</button>
+  </form>
