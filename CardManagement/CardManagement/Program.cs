@@ -51,7 +51,7 @@ class Program
                 CustomerAddress = "456 Elm St",
                 Email = "jane.smith@example.com",
                 PhoneNumber = "987-054-3210",
-                Accounts = new List<Account>() // Initialize Accounts list
+                Accounts = new List<Account>() 
             };
             context.Customers.Add(customer);
             context.SaveChanges();
@@ -90,7 +90,7 @@ class Program
                 Type = Transaction.TransactionType.Deposit,
                 Amount = 200.0,
                 Description = "Deposit for savings",
-                Accounts = account1 // Associate with the account
+                Accounts = account1 
             };
 
             account1.AddTransaction(depositTransaction);
@@ -111,10 +111,8 @@ class Program
             context.Transactions.Add(withdrawalTransaction);
 
 
-            // Save transactions to the database
             context.SaveChanges();
 
-            // Display updated account details
             customer.AccountDisplay();
 
             // List transactions for account1
