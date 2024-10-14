@@ -14,7 +14,7 @@ namespace CardManagement
 
             if (tempCust != null)
             {
-                tempCust.Display(); // Ensure this method exists in the Customer class
+                tempCust.Display();
             }
             else
             {
