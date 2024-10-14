@@ -1,0 +1,43 @@
+<p>employee-form works!</p>
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label for="first-name">First Name: </label>
+  <input id="first-name" type="text" formControlName="firstName">
+  
+
+  <label for="last-name">Last Name: </label>
+  <input id="last-name" type="text" formControlName="lastName">
+
+
+  <label for="email">Email: </label>
+  <input id="email" type="text" formControlName="email">
+
+
+  <label for="phone">Phone: </label>
+  <input id="phone" type="text" formControlName="phone">
+
+
+
+  <div formGroupName="address">
+    <label for="address_line_1">Address Line 1: </label>
+    <input id="address_line_1" type="text" formControlName="address_line_1">
+
+    <label for="address_line_2">Address Line 2: </label>
+    <input id="address_line_2" type="text" formControlName="address_line_2">
+
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="employeeDetails">
+  <h3>Employee Details</h3>
+  <p>Name: {{ employeeDetails.firstName }} {{ employeeDetails.lastName }}</p>
+  <p>Email: {{ employeeDetails.email }}</p>
+  <p>Phone Number: {{ employeeDetails.phone }}</p>
+  <p>Address Line 1: {{ employeeDetails.address?.address_line_1 }}</p>
+  <p>Address Line 2: {{ employeeDetails.address?.address_line_2 }}</p>
+  <p>City: {{ employeeDetails.address?.city }}</p>
+</div>
