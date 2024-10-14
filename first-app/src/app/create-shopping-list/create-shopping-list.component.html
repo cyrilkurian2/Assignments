@@ -1,0 +1,12 @@
+<h1>My Shopping List</h1>
+<form (ngSubmit)="addItem()" #shoppingForm="ngForm">
+    <label>Enter a new item:</label>
+    <input type="text" [(ngModel)]="newItem" name="itemInput" placeholder="Enter a new item" required>
+    <button type="submit">Add Item</button>
+</form>
+<ul>
+    <li *ngFor="let item of shoppingList">
+        {{ item }}
+        <button (click)="deleteItem(item)">Delete</button>
+    </li>
+</ul>

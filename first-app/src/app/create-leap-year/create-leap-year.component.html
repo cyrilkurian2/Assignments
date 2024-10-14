@@ -1,0 +1,10 @@
+<form (ngSubmit)="checkLeapYear()">
+    <label for="year-input">Enter a Year:</label>
+    <input type="number" [(ngModel)]="yearInput" placeholder="Enter a Year" required name="yearInput">
+    <button type="submit">Check</button>
+  </form>
+  
+  <div *ngIf="resultMessage">
+    <p>{{ resultMessage }}</p>
+  </div>
+  
